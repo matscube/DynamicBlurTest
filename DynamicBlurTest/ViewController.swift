@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlurView: UIView {
+class BlurView: UIVisualEffectView {
     var currentlocInSelf: CGPoint!
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
@@ -32,9 +32,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let blurView = BlurView()
-        blurView.backgroundColor = UIColor.blueColor()
+        let bg1 = UIView()
+        bg1.frame = CGRectMake(0, 0, 100, 100)
+        bg1.backgroundColor = UIColor.blueColor()
+        view.addSubview(bg1)
+        let bg2 = UIView()
+        bg2.frame = CGRectMake(0, 100, 100, 100)
+        bg2.backgroundColor = UIColor.redColor()
+        view.addSubview(bg2)
+        let bg3 = UIView()
+        bg3.frame = CGRectMake(100, 0, 100, 100)
+        bg3.backgroundColor = UIColor.orangeColor()
+        view.addSubview(bg3)
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurView = BlurView(effect: blurEffect)
         blurView.frame = CGRectMake(0, 0, 100, 100)
+        blurView.center = view.center
         view.addSubview(blurView)
     }
 
