@@ -44,6 +44,12 @@ class ViewController: UIViewController {
         bg3.frame = CGRectMake(100, 0, 100, 100)
         bg3.backgroundColor = UIColor.orangeColor()
         view.addSubview(bg3)
+//        let bg4 = UIImageView()
+//        let image = UIImage("")!
+//        let bg4.image = image
+//        bg4.frame = CGRectMake(100, 100, 100, 100)
+//        view.addSubview(bg4)
+
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         let blurView = BlurView(effect: blurEffect)
