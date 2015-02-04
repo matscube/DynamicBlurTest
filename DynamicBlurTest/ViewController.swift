@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         bg3.backgroundColor = UIColor.orangeColor()
         view.addSubview(bg3)
 //        let bg4 = UIImageView()
-//        let image = UIImage("")!
+//        let image = UIImage("")! // Any image you want to test!
 //        let bg4.image = image
 //        bg4.frame = CGRectMake(100, 100, 100, 100)
 //        view.addSubview(bg4)
